@@ -1,6 +1,22 @@
 {
   "functions": {
     "api/index.php": {
+      "runtime": "vercel-php@0.6.0",
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  },
+  "routes": [
+    { "src": "/(.*)", "dest": "api/index.php" }
+  ],
+  "build": {
+    "env": {
+      "NODE_VERSION": "20" 
+    }
+  }
+}{
+  "functions": {
+    "api/index.php": {
       "runtime": "vercel-php@0.6.0"
     }
   },
